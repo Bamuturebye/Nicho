@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Nicho</string>
+
+    <string name="here">Now am here</string>
+    <string name="go">Continue</string>
 </resources>
