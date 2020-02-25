@@ -8,4 +8,10 @@
     <item
         android:id="@+id/gmail"
         android:title="my gmail" />
+    <item
+        android:id="@+id/view"
+        android:title="my views" />
+    <item
+        android:id="@+id/c"
+        android:title="program" />
 </menu>

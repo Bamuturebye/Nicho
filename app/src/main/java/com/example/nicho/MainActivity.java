@@ -49,8 +49,11 @@ public class MainActivity extends AppCompatActivity {
                 //Intent i = new Intent(this, Active1.class);
                 // Intent a = new Intent(Intent.ACTION_VIEW, Uri.parse(nam1));
 
-            case R.id.gmail:
+            case R.id.c:
                 startActivity(new Intent(this, Active2.class));
+                return true;
+            case R.id.view:
+                startActivity(new Intent(this, Lists.class));
                 return true;
             default:
 
