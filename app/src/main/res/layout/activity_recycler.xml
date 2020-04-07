@@ -2,20 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:background="@android:color/holo_green_light"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Active2">
+    tools:context=".Recycler">
 
-    <TextView
-        android:id="@+id/cprog"
-        android:layout_width="307dp"
-        android:layout_height="360dp"
-        android:text="C Program"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/university"
+        android:layout_width="294dp"
+        android:layout_height="565dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

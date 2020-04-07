@@ -14,4 +14,10 @@
     <item
         android:id="@+id/c"
         android:title="program" />
+    <item
+        android:id="@+id/call_Id"
+        android:title="Call" />
+    <item
+        android:id="@+id/view1"
+        android:title="recyclerView" />
 </menu>
