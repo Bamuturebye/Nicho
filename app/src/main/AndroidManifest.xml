@@ -3,7 +3,6 @@
     package="com.example.nicho">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -13,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LinearActivity"></activity>
+        <activity
+            android:name=".WriteRead"
+            android:label="@string/title_activity_write_read"></activity>
+        <activity android:name=".ForegroundService" />
+        <activity android:name=".Player" />
+        <activity android:name=".LinearActivity" />
         <activity android:name=".Recycler" />
 
         <receiver
@@ -35,6 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".This_Service" />
     </application>
 
 </manifest>

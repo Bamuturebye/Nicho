@@ -7,7 +7,7 @@ import android.os.Vibrator;
 import android.view.Gravity;
 import android.widget.Toast;
 
-public class Mine extends BroadcastReceiver {
+public class Mine extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.app.AlarmManager;
@@ -18,16 +19,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Mine receive= new Mine(){
-
-
         @Override
         public void onReceive(Context context, Intent intent) {
             int r=intent.getIntExtra("level",0);
@@ -44,9 +44,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         registerReceiver(receive,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-
+    }
+    //@Override
+    public void onClick(View view) {
+    Intent intent= new Intent(this, DisplayMessageActivity.class);
+    startActivity(intent);
 
     }
 //    public void clickHere(View v){
@@ -63,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
         PendingIntent pending = PendingIntent.getBroadcast(this.getApplicationContext(),0, intent,0);
         //The alarm class to generate an alarm
-        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        AlarmManager alarmManager =(AlarmManager)getSystemService(ALARM_SERVICE);
         assert alarmManager != null;
         alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+(alert*1000),pending);
-        Toast.makeText(this,"Alarm set in"+alert+ "Seconds",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Alarm set in"+" "+alert+" "+ "Seconds",Toast.LENGTH_LONG).show();
 
 
     }
@@ -85,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menuname,menu);
@@ -95,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemId1 = item.getItemId();
         switch (itemId1) {
-            case R.id.web:
+            case R.id.muzik:
                 startActivity(new Intent(this, Active1.class));
                 return true;
             case R.id.gmail:
@@ -144,14 +148,19 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 return true;
+
+            case R.id.ringTone:
+                startActivity(new Intent(this, ForegroundService.class));
+                return true;
+
+            case R.id.file:
+                startActivity(new Intent(this, WriteRead.class));
+                return true;
+
             default:
 
                 return super.onOptionsItemSelected(item);
         }
     }
 
-
-
-//    public void clickHere(View view) {
-//    }
 }

@@ -13,58 +13,61 @@ import java.util.List;
 
 public class WorkOne extends RecyclerView.Adapter<WorkOne.ViewHolder> {
 
-    private List<String> work;
-    private LayoutInflater inflater;
-    private ItemClickListener itemClickListener;
+  private List<String> work;
+  private LayoutInflater inflater;
+  private ItemClickListener itemClickListener;
 
-    WorkOne(Context context, List<String> work2 ){
-        this.inflater=LayoutInflater.from(context);
-        this.work= work2;
-    }
+  WorkOne(Context context, List<String> work2 ){
+    this.inflater=LayoutInflater.from(context);
+    this.work= work2;
+  }
 
 
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.activity_linear,parent,false);
+  @Override
+  public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    View view = inflater.inflate(R.layout.activity_linear,parent,false);
 
-        return new ViewHolder(view);
-    }
+    return new ViewHolder(view);
+  }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String w = work.get(position);
-        holder.textView.setText(w);
+  @Override
+  public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    String w = work.get(position);
+    holder.textView.setText(w);
 
-    }
+  }
 
-    @Override
-    public int getItemCount() {
-        return  work.size();
+  @Override
+  public int getItemCount() {
+    return  work.size();
+  }
+
+    public void setClickListener() {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView textView;
+    TextView textView;
 
-        ViewHolder(View itemView){
-            super(itemView);
-            textView=itemView.findViewById(R.id.productitems);
-            itemView.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
-            if (itemClickListener !=null) itemClickListener.onItemClick(v, getAdapterPosition());
-        }
+    ViewHolder(View itemView){
+      super(itemView);
+      textView=itemView.findViewById(R.id.productitems);
+      itemView.setOnClickListener(this);
     }
 
-    String getItem(int id) {
-        return  work.get(id);}
-
-    public void setClickListener(ItemClickListener itemClickListener2) {
-        this.itemClickListener=itemClickListener2;
+    @Override
+    public void onClick(View v) {
+      if (itemClickListener !=null) itemClickListener.onItemClick(v, getAdapterPosition());
     }
+  }
 
-    public interface ItemClickListener {
-        void onItemClick(View view, int position);
-    }
+  String getItem(int id) {
+    return  work.get(id);}
+
+  public void setClickListener(ItemClickListener itemClickListener2) {
+    this.itemClickListener=itemClickListener2;
+  }
+
+  public interface ItemClickListener {
+    void onItemClick(View view, int position);
+  }
 }

@@ -8,13 +8,13 @@
     tools:context=".Recycler">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/university"
-        android:layout_width="294dp"
-        android:layout_height="565dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/university"
+      android:layout_width="294dp"
+      android:layout_height="565dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

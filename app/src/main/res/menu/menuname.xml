@@ -2,22 +2,29 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/web"
-        android:title="my music" />
-    <item
-        android:id="@+id/gmail"
-        android:title="my gmail" />
-    <item
-        android:id="@+id/view"
-        android:title="my views" />
-    <item
-        android:id="@+id/c"
-        android:title="program" />
-    <item
-        android:id="@+id/call_Id"
-        android:title="Call" />
-    <item
-        android:id="@+id/view1"
-        android:title="recyclerView" />
+  <item
+      android:id="@+id/muzik"
+      android:title="my music" />
+  <item
+      android:id="@+id/gmail"
+      android:title="my gmail" />
+  <item
+      android:id="@+id/view"
+      android:title="my views" />
+  <item
+      android:id="@+id/c"
+      android:title="program" />
+  <item
+      android:id="@+id/call_Id"
+      android:title="Call" />
+  <item
+      android:id="@+id/view1"
+      android:title="recyclerView" />
+  <item
+      android:id="@+id/file"
+      android:title="Storage" />
+  <item
+      android:id="@+id/ringTone"
+      android:title="Ringtone" />
+
 </menu>

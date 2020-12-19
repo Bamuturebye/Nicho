@@ -30,12 +30,12 @@ public class Recycler extends AppCompatActivity {
         //set up the RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter=new WorkOne(this,elements);
-        adapter.setClickListener((WorkOne.ItemClickListener) this);
+        //adapter.setClickListener((ItemClickListener) this);;
         recyclerView.setAdapter(adapter);
 
     }
 
-//    @Override
+    //    @Override
     public void onItemClick(View view, int position) {
 
     }

@@ -2,4 +2,8 @@
 
     <string name="here">Now am here</string>
     <string name="go">Continue</string>
+    <string name="title_activity_write_read">WriteRead</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

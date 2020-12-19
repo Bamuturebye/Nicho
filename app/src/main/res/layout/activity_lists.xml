@@ -7,12 +7,12 @@
     android:background="@android:color/holo_green_light"
     tools:context=".Lists">
 
-    <ListView
-        android:id="@+id/mine"
-        android:layout_width="298dp"
-        android:layout_height="420dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <ListView
+      android:id="@+id/mine"
+      android:layout_width="298dp"
+      android:layout_height="420dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
