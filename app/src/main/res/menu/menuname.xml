@@ -27,4 +27,8 @@
       android:id="@+id/ringTone"
       android:title="Ringtone" />
 
+  <item
+      android:id="@+id/file1"
+      android:title="Alarm" />
+
 </menu>

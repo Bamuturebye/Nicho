@@ -157,6 +157,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, WriteRead.class));
                 return true;
 
+
+            case R.id.file1:
+                startActivity(new Intent(this, AlarmActivity.class));
+                return true;
+
             default:
 
                 return super.onOptionsItemSelected(item);

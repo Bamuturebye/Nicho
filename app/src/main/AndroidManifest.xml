@@ -2,7 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nicho">
 
+    <permission
+        android:name="com.example.nicho.READ_DATABASE"
+        android:protectionLevel="normal" />
+<!--    these are near field communication permission-->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <permission
+        android:name="com.example.nicho.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+<!--     This allows you to get data from the device-->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+<!--    This is how you let the phone Vibrate thru code-->
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -12,11 +24,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AlarmActivity"></activity>
         <activity
             android:name=".WriteRead"
-            android:label="@string/title_activity_write_read"></activity>
+            android:label="@string/title_activity_write_read" />
         <activity android:name=".ForegroundService" />
-        <activity android:name=".Player" />
         <activity android:name=".LinearActivity" />
         <activity android:name=".Recycler" />
 
@@ -39,7 +51,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- these allows you to read and write(create) database-->
+<!--        <provider-->
+<!--            android:name=".ContactsProvider"-->
+<!--            android:authorities="com.example.nicho"-->
+<!--            android:exported="true"-->
 
+<!--            android:readPermission="com.example.nicho.READ_DATABASE"-->
+<!--            android:writePermission="com.example.nicho.WRITE_DATABASE" />-->
+
+<!--     this is my services-->
         <service android:name=".This_Service" />
     </application>
 
